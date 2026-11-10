@@ -7,7 +7,7 @@
   <meta name="author" content="Queen City F1" />
   <meta name="copyright" content="© 2026 Queen City F1. All rights reserved." />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.jolpi.ca; style-src 'self'; script-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.jolpi.ca; style-src 'self'; script-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests" />
   <title>Queen City F1 — Charlotte Race Club</title>
   <link rel="stylesheet" href="assets/styles.css" />
   <link rel="stylesheet" href="assets/logo.css" />
@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="assets/motion.css" />
   <link rel="stylesheet" href="assets/about.css" />
   <link rel="stylesheet" href="assets/ownership.css" />
+  <link rel="stylesheet" href="assets/launch.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -24,12 +25,14 @@
       <img class="brand-logo" src="assets/queen-city-f1-logo.png" alt="" />
       <span>QUEEN CITY <b>F1</b></span>
     </a>
-    <nav aria-label="Primary navigation">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span><b>Menu</b></button>
+    <nav id="primary-nav" aria-label="Primary navigation">
       <a href="#calendar">Calendar</a>
       <a href="#events">Meetups</a>
       <a href="#standings">Standings</a>
       <a href="#community">Community</a>
       <a href="#about">About us</a>
+      <a class="mobile-nav-social" href="https://www.instagram.com/queencityf1/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
     </nav>
     <a class="social-link" href="https://www.instagram.com/queencityf1/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
   </header>
@@ -161,9 +164,6 @@
         <a class="social-card discord" href="https://discord.gg/7zzmC4cnqP" target="_blank" rel="noopener noreferrer">
           <span class="social-icon" aria-hidden="true">DC</span><span><small>Live race chat</small><strong>Discord</strong><em>Queen City F1 server</em></span><b aria-hidden="true">↗</b>
         </a>
-        <div class="social-card signal pending-link" aria-label="Signal group chat link needed">
-          <span class="social-icon" aria-hidden="true">SG</span><span><small>Group messages</small><strong>Signal</strong><em>Full invite link needed</em></span><b aria-hidden="true">•••</b>
-        </div>
         <a class="social-card gridrival" href="https://gridrival.app.link/jDi2sYiqAHb" target="_blank" rel="noopener noreferrer">
           <span class="social-icon" aria-hidden="true">GR</span><span><small>Fantasy league</small><strong>GridRival</strong><em>Join the Queen City league</em></span><b aria-hidden="true">↗</b>
         </a>
@@ -181,44 +181,7 @@
         </div>
       </div>
 
-      <div class="founders-heading">
-        <div>
-          <p class="eyebrow"><span></span> Meet the founders</p>
-          <h3>THE PEOPLE<br>BEHIND THE GRID.</h3>
-        </div>
-        <p>Founder names, photos, roles, and stories can be added here when the club is ready.</p>
-      </div>
-
-      <div class="founder-grid">
-        <!-- Replace each placeholder with an approved public photo and biography. -->
-        <article class="founder-card">
-          <div class="founder-photo" aria-hidden="true"><span>01</span><b>PHOTO</b></div>
-          <div class="founder-copy">
-            <p class="founder-role">Co-founder · Club role</p>
-            <h4>FOUNDER NAME</h4>
-            <p>Add a short introduction: how they found Formula 1, why they helped start Queen City F1, and what they enjoy most about bringing Charlotte fans together.</p>
-            <span class="founder-detail">Favorite driver or team · Optional</span>
-          </div>
-        </article>
-        <article class="founder-card">
-          <div class="founder-photo" aria-hidden="true"><span>02</span><b>PHOTO</b></div>
-          <div class="founder-copy">
-            <p class="founder-role">Co-founder · Club role</p>
-            <h4>FOUNDER NAME</h4>
-            <p>Add a short introduction: their connection to racing, what they contribute to the club, and the race weekend they never miss.</p>
-            <span class="founder-detail">Favorite circuit · Optional</span>
-          </div>
-        </article>
-        <article class="founder-card">
-          <div class="founder-photo" aria-hidden="true"><span>03</span><b>PHOTO</b></div>
-          <div class="founder-copy">
-            <p class="founder-role">Founding member · Club role</p>
-            <h4>FOUNDER NAME</h4>
-            <p>Add a short introduction: what race day means to them and what they hope every new member finds in the Queen City F1 community.</p>
-            <span class="founder-detail">First Grand Prix watched · Optional</span>
-          </div>
-        </article>
-      </div>
+      <!-- Founder profiles will be added after names, photos, and biographies are approved for public use. -->
     </section>
 
     <section class="club-section" id="club">
@@ -239,9 +202,9 @@
 
   <footer>
     <a class="brand footer-brand" href="#top"><img class="brand-logo" src="assets/queen-city-f1-logo.png" alt="" /><span>QUEEN CITY <b>F1</b></span></a>
-    <p>Independent Charlotte fan community. Not affiliated with Formula 1®.</p>
+    <p class="legal-disclaimer">This website is unofficial and is not associated in any way with the Formula 1 companies. F1, FORMULA ONE, FORMULA 1, FIA FORMULA ONE WORLD CHAMPIONSHIP, GRAND PRIX and related marks are trade marks of Formula One Licensing B.V.</p>
     <p><a class="footer-link" href="security.html">Security & privacy</a> · © <span id="copyright-year"></span> Queen City F1 · All rights reserved</p>
   </footer>
-  <script src="assets/app.js" defer></script>
+  <script src="assets/app.js?v=2" defer></script>
 </body>
 </html>

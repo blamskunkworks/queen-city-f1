@@ -1,10 +1,10 @@
 .hero { background:#050607; }
 .hero-media { position:absolute; inset:0; overflow:hidden; z-index:0; background:#050607; }
 .hero-frame { position:absolute; inset:-4%; opacity:0; background-size:cover; background-position:center; will-change:transform,opacity; animation:heroFilm 28s linear infinite; }
-.hero-frame.frame-one { background-image:url("hero-charlotte-night-v1.png"); animation-delay:0s; }
-.hero-frame.frame-two { background-image:url("media/hero-motion-closeup-v1.png"); animation-delay:7s; }
-.hero-frame.frame-three { background-image:url("media/hero-motion-garage-v1.png"); animation-delay:14s; }
-.hero-frame.frame-four { background-image:url("media/senna-rain-tribute-v1.png"); animation-delay:21s; }
+.hero-frame.frame-one { background-image:url("hero-charlotte-night-v1.jpg"); animation-delay:0s; }
+.hero-frame.frame-two { background-image:url("media/hero-motion-closeup-v1.jpg"); animation-delay:7s; }
+.hero-frame.frame-three { background-image:url("media/hero-motion-garage-v1.jpg"); animation-delay:14s; }
+.hero-frame.frame-four { background-image:url("media/senna-rain-tribute-v1.jpg"); animation-delay:21s; }
 .hero-media:after { content:""; position:absolute; inset:0; background:linear-gradient(90deg,rgba(5,6,7,.98) 0%,rgba(5,6,7,.91) 32%,rgba(5,6,7,.42) 68%,rgba(5,6,7,.58) 100%),linear-gradient(0deg,rgba(5,6,7,.42),transparent 55%); }
 .hero-grid { opacity:.62; z-index:1; }
 .speed-lines { z-index:2; }

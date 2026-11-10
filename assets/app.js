@@ -31,6 +31,19 @@ document.querySelectorAll('.palette-chip').forEach(button=>{
   });
 });
 
+const menuToggle=document.querySelector('.menu-toggle');
+const primaryNav=document.getElementById('primary-nav');
+if(menuToggle&&primaryNav){
+  const closeMenu=()=>{document.body.classList.remove('menu-open');menuToggle.setAttribute('aria-expanded','false');};
+  menuToggle.addEventListener('click',()=>{
+    const open=!document.body.classList.contains('menu-open');
+    document.body.classList.toggle('menu-open',open);
+    menuToggle.setAttribute('aria-expanded',String(open));
+  });
+  primaryNav.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));
+  document.addEventListener('keydown',event=>{if(event.key==='Escape')closeMenu();});
+}
+
 const revealObserver = new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting){ entry.target.classList.add('in-view'); revealObserver.unobserve(entry.target); }
