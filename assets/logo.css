@@ -1,0 +1,13 @@
+.brand-logo {
+  width: 58px;
+  height: 58px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 0 3px rgba(210, 20, 55, 0.16);
+}
+
+.footer-brand .brand-logo {
+  width: 48px;
+  height: 48px;
+}

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Queen City F1 — Charlotte's home for Formula 1 watch parties, race schedules, and standings." />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://api.jolpi.ca; style-src 'self'; script-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests" />
+  <title>Queen City F1 — Charlotte Race Club</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="assets/logo.css" />
+  <link rel="stylesheet" href="assets/explorer.css" />
+  <link rel="stylesheet" href="assets/events.css" />
+  <link rel="stylesheet" href="assets/motion.css" />
+  <link rel="stylesheet" href="assets/about.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Queen City F1 home">
+      <img class="brand-logo" src="assets/queen-city-f1-logo.png" alt="" />
+      <span>QUEEN CITY <b>F1</b></span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#calendar">Calendar</a>
+      <a href="#events">Meetups</a>
+      <a href="#standings">Standings</a>
+      <a href="#community">Community</a>
+      <a href="#about">About us</a>
+    </nav>
+    <a class="social-link" href="https://www.instagram.com/queencityf1/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-media" aria-hidden="true">
+        <span class="hero-frame frame-one"></span>
+        <span class="hero-frame frame-two"></span>
+        <span class="hero-frame frame-three"></span>
+      </div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> Charlotte, North Carolina</p>
+        <h1>LIGHTS OUT.<br><em>QUEEN CITY.</em></h1>
+        <p class="hero-deck">Your home for Formula 1 in Charlotte. Find the next race, follow the championship, and meet the crew before the five lights go out.</p>
+        <div class="palette-picker" aria-label="Preview a color scheme">
+          <span>Try a colorway</span>
+          <button class="palette-chip active" type="button" data-theme="heritage" aria-pressed="true"><i></i> Heritage red</button>
+          <button class="palette-chip" type="button" data-theme="gold" aria-pressed="false"><i></i> Victory gold</button>
+          <button class="palette-chip" type="button" data-theme="steel" aria-pressed="false"><i></i> Steel & crimson</button>
+        </div>
+        <div class="hero-actions">
+          <a class="button primary" href="#calendar">View race calendar <span aria-hidden="true">↓</span></a>
+          <a class="button ghost" href="https://www.instagram.com/queencityf1/" target="_blank" rel="noopener noreferrer">Follow the club <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <aside class="next-race" aria-labelledby="next-race-title">
+        <div class="card-topline"><span>Next up</span><span class="live-dot">Live data</span></div>
+        <p class="round" id="next-round">Loading season…</p>
+        <h2 id="next-race-title">Checking the grid</h2>
+        <p class="circuit" id="next-circuit">Race details will appear here.</p>
+        <div class="countdown" id="countdown" aria-label="Countdown to the next race">
+          <div><b>--</b><span>days</span></div><div><b>--</b><span>hrs</span></div><div><b>--</b><span>min</span></div>
+        </div>
+        <div class="race-time"><span>Race start</span><strong id="next-time">—</strong></div>
+      </aside>
+      <div class="speed-lines" aria-hidden="true"></div>
+    </section>
+
+    <section class="ticker" aria-label="Club highlights">
+      <p><span>01</span> EVERY RACE WEEKEND</p><i></i><p><span>02</span> CHARLOTTE, NC</p><i></i><p><span>03</span> ALL FANS WELCOME</p><i></i><p><span>04</span> ZERO SPOILERS</p>
+    </section>
+
+    <div class="motion-marquee" aria-hidden="true">
+      <div><span>FULL SEND. QUEEN CITY.</span><i>◆</i><span>FULL SEND. QUEEN CITY.</span><i>◆</i><span>FULL SEND. QUEEN CITY.</span><i>◆</i></div>
+    </div>
+
+    <section class="events-section" id="events">
+      <div class="events-heading">
+        <p class="eyebrow"><span></span> Next club meetup</p>
+        <h2>WATCH IT<br><em>WITH THE GRID.</em></h2>
+        <p>Join Charlotte race fans for the next Grand Prix. Event details update here as soon as the club confirms the venue.</p>
+      </div>
+      <article class="featured-event" id="featured-event" aria-live="polite">
+        <div class="event-status"><span></span> Loading next race…</div>
+        <div class="event-race"><small>Race showing</small><h3>Checking the calendar</h3><p>Details will appear here.</p></div>
+        <dl class="event-details">
+          <div><dt>Where</dt><dd id="meetup-venue">To be announced</dd></div>
+          <div><dt>When</dt><dd id="meetup-time">—</dd></div>
+          <div><dt>Coverage</dt><dd id="meetup-coverage">Race session</dd></div>
+        </dl>
+        <div class="event-actions">
+          <a class="button event-button" href="https://www.instagram.com/queencityf1/" target="_blank" rel="noopener noreferrer">Check meetup updates <span aria-hidden="true">↗</span></a>
+          <span class="button disabled-button" aria-disabled="true">Directions after venue confirmation</span>
+        </div>
+      </article>
+      <div class="race-guide">
+        <section class="weekend-card" aria-labelledby="weekend-title">
+          <div class="guide-title"><span>01</span><div><small>Weekend planner</small><h3 id="weekend-title">Session schedule</h3></div></div>
+          <div class="session-list" id="session-list" aria-live="polite"><p>Loading the race weekend…</p></div>
+        </section>
+        <section class="watch-card" aria-labelledby="watch-title">
+          <div class="guide-title"><span>02</span><div><small>Race briefing</small><h3 id="watch-title">What to watch for</h3></div></div>
+          <p id="race-brief">The race briefing will load with the next event.</p>
+          <ul id="event-amenities" class="amenity-list">
+            <li><span>Doors</span><b>To be announced</b></li>
+            <li><span>Admission</span><b>To be announced</b></li>
+            <li><span>Format</span><b>Live showing</b></li>
+          </ul>
+        </section>
+      </div>
+      <section class="first-timer" aria-labelledby="first-timer-title">
+        <div><p class="eyebrow"><span></span> New to the club?</p><h3 id="first-timer-title">YOUR FIRST RACE DAY</h3><p>No expert knowledge required. Pick a driver, grab a seat, and enjoy the noise.</p></div>
+        <div class="faq-list">
+          <details><summary>Do I need a reservation?</summary><p>Reservation or walk-in details will appear on the meetup card once the venue confirms them.</p></details>
+          <details><summary>Will the race be shown live?</summary><p>The event card identifies the showing format. Very early races may be presented as replays; confirmed details will always be labeled.</p></details>
+          <details><summary>Can new F1 fans attend?</summary><p>Absolutely. The club welcomes first-time viewers, longtime fans, and every team allegiance.</p></details>
+          <details><summary>What should I wear?</summary><p>Team gear is encouraged but never required. Come as you are.</p></details>
+        </div>
+      </section>
+      <div class="upcoming-events">
+        <div class="upcoming-label"><span>On the horizon</span><small>Upcoming race weekends</small></div>
+        <div class="event-strip" id="event-strip" aria-live="polite"><div class="event-placeholder">Loading upcoming races…</div></div>
+      </div>
+    </section>
+
+    <section class="race-section" id="calendar">
+      <div class="section-heading">
+        <div><p class="eyebrow dark"><span></span> The season</p><h2>RACE<br><em>CALENDAR</em></h2></div>
+        <div class="year-switch" aria-label="Season"><span>Season</span><strong id="season-year">2026</strong></div>
+      </div>
+      <p class="section-intro">Every Grand Prix in one clean view. Times are shown in your local timezone, with completed results added as the season unfolds.</p>
+      <div class="race-list" id="race-list" aria-live="polite">
+        <div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>
+      </div>
+      <p class="data-note" id="data-note">Live schedule powered by Jolpica F1.</p>
+    </section>
+
+    <section class="standings-section" id="standings">
+      <div class="standings-copy">
+        <p class="eyebrow"><span></span> Championship watch</p>
+        <h2>WHO'S<br><em>OUT FRONT?</em></h2>
+        <p>Follow the drivers at the sharp end of the field. Standings refresh throughout the season as every point changes the championship picture.</p>
+        <button class="text-button" id="refresh-data" type="button">Refresh live standings <span aria-hidden="true">↻</span></button>
+      </div>
+      <div class="leaderboard" id="leaderboard" aria-live="polite">
+        <div class="loading-state">Loading championship standings…</div>
+      </div>
+    </section>
+
+    <section class="community-section" id="community">
+      <div class="community-heading">
+        <p class="eyebrow dark"><span></span> Join the conversation</p>
+        <h2>FIND YOUR<br><em>RACE CREW.</em></h2>
+        <p>Watch parties are only part of the grid. Pick the community that fits how you follow race week.</p>
+      </div>
+      <div class="social-grid">
+        <a class="social-card instagram" href="https://www.instagram.com/queencityf1/" target="_blank" rel="noopener noreferrer">
+          <span class="social-icon" aria-hidden="true">IG</span><span><small>News & meetups</small><strong>Instagram</strong><em>@queencityf1</em></span><b aria-hidden="true">↗</b>
+        </a>
+        <a class="social-card discord" href="https://discord.gg/7zzmC4cnqP" target="_blank" rel="noopener noreferrer">
+          <span class="social-icon" aria-hidden="true">DC</span><span><small>Live race chat</small><strong>Discord</strong><em>Queen City F1 server</em></span><b aria-hidden="true">↗</b>
+        </a>
+        <div class="social-card signal pending-link" aria-label="Signal group chat link needed">
+          <span class="social-icon" aria-hidden="true">SG</span><span><small>Group messages</small><strong>Signal</strong><em>Full invite link needed</em></span><b aria-hidden="true">•••</b>
+        </div>
+        <a class="social-card gridrival" href="https://gridrival.app.link/jDi2sYiqAHb" target="_blank" rel="noopener noreferrer">
+          <span class="social-icon" aria-hidden="true">GR</span><span><small>Fantasy league</small><strong>GridRival</strong><em>Join the Queen City league</em></span><b aria-hidden="true">↗</b>
+        </a>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-intro">
+        <p class="eyebrow"><span></span> About Queen City F1</p>
+        <h2>BUILT IN<br><em>CHARLOTTE.</em></h2>
+        <div class="about-story">
+          <p class="about-lead">A home for the people who plan their weekends around lights out.</p>
+          <p>Queen City F1 is an independent community created to bring Charlotte-area Formula 1 fans together. We gather for race-day watch parties, share the highs and heartbreaks of the season, and make room for everyone—from lifelong supporters to people watching their first Grand Prix.</p>
+          <p>The goal is simple: make it easy to find the next race, meet good people, and enjoy the sport together.</p>
+        </div>
+      </div>
+
+      <div class="founders-heading">
+        <div>
+          <p class="eyebrow"><span></span> Meet the founders</p>
+          <h3>THE PEOPLE<br>BEHIND THE GRID.</h3>
+        </div>
+        <p>Founder names, photos, roles, and stories can be added here when the club is ready.</p>
+      </div>
+
+      <div class="founder-grid">
+        <!-- Replace each placeholder with an approved public photo and biography. -->
+        <article class="founder-card">
+          <div class="founder-photo" aria-hidden="true"><span>01</span><b>PHOTO</b></div>
+          <div class="founder-copy">
+            <p class="founder-role">Co-founder · Club role</p>
+            <h4>FOUNDER NAME</h4>
+            <p>Add a short introduction: how they found Formula 1, why they helped start Queen City F1, and what they enjoy most about bringing Charlotte fans together.</p>
+            <span class="founder-detail">Favorite driver or team · Optional</span>
+          </div>
+        </article>
+        <article class="founder-card">
+          <div class="founder-photo" aria-hidden="true"><span>02</span><b>PHOTO</b></div>
+          <div class="founder-copy">
+            <p class="founder-role">Co-founder · Club role</p>
+            <h4>FOUNDER NAME</h4>
+            <p>Add a short introduction: their connection to racing, what they contribute to the club, and the race weekend they never miss.</p>
+            <span class="founder-detail">Favorite circuit · Optional</span>
+          </div>
+        </article>
+        <article class="founder-card">
+          <div class="founder-photo" aria-hidden="true"><span>03</span><b>PHOTO</b></div>
+          <div class="founder-copy">
+            <p class="founder-role">Founding member · Club role</p>
+            <h4>FOUNDER NAME</h4>
+            <p>Add a short introduction: what race day means to them and what they hope every new member finds in the Queen City F1 community.</p>
+            <span class="founder-detail">First Grand Prix watched · Optional</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="club-section" id="club">
+      <div class="club-number" aria-hidden="true">704</div>
+      <div class="club-copy">
+        <p class="eyebrow dark"><span></span> Your seat is waiting</p>
+        <h2>COME WATCH<br><em>THE NEXT ONE.</em></h2>
+        <p>Check the next meetup, follow Queen City F1 for venue announcements, and arrive ready for lights out. New fans and seasoned supporters are equally welcome.</p>
+        <a class="button dark-button" href="https://www.instagram.com/queencityf1/" target="_blank" rel="noopener noreferrer">Find the next meetup <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#top"><img class="brand-logo" src="assets/queen-city-f1-logo.png" alt="" /><span>QUEEN CITY <b>F1</b></span></a>
+    <p>Independent Charlotte fan community. Not affiliated with Formula 1®.</p>
+    <p><a class="footer-link" href="security.html">Security & privacy</a> · © <span id="copyright-year"></span> Queen City F1</p>
+  </footer>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>

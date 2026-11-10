@@ -1,0 +1,29 @@
+.hero { background:#050607; }
+.hero-media { position:absolute; inset:0; overflow:hidden; z-index:0; background:#050607; }
+.hero-frame { position:absolute; inset:-4%; opacity:0; background-size:cover; background-position:center; will-change:transform,opacity; animation:heroFilm 21s linear infinite; }
+.hero-frame.frame-one { background-image:url("hero-charlotte-night-v1.png"); animation-delay:0s; }
+.hero-frame.frame-two { background-image:url("media/hero-motion-closeup-v1.png"); animation-delay:7s; }
+.hero-frame.frame-three { background-image:url("media/hero-motion-garage-v1.png"); animation-delay:14s; }
+.hero-media:after { content:""; position:absolute; inset:0; background:linear-gradient(90deg,rgba(5,6,7,.98) 0%,rgba(5,6,7,.91) 32%,rgba(5,6,7,.42) 68%,rgba(5,6,7,.58) 100%),linear-gradient(0deg,rgba(5,6,7,.42),transparent 55%); }
+.hero-grid { opacity:.62; z-index:1; }
+.speed-lines { z-index:2; }
+@keyframes heroFilm { 0%{opacity:0;transform:scale(1.09) translate3d(1.5%,0,0)} 5%{opacity:1} 28%{opacity:1} 33.333%,100%{opacity:0;transform:scale(1.015) translate3d(-1.5%,-.5%,0)} }
+.hero-copy .eyebrow,.hero h1,.hero-deck,.palette-picker,.hero-actions,.next-race { opacity:0; transform:translateY(28px); animation:heroEnter .75s cubic-bezier(.2,.8,.2,1) forwards; }
+.hero h1{animation-delay:.08s}.hero-deck{animation-delay:.16s}.palette-picker{animation-delay:.24s}.hero-actions{animation-delay:.32s}.next-race{animation-delay:.25s;transform:translateX(42px)}
+@keyframes heroEnter{to{opacity:1;transform:translate3d(0,0,0)}}
+
+.reveal-section { opacity:0; transform:translateY(55px); transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1); }
+.reveal-section.in-view { opacity:1; transform:translateY(0); }
+.reveal-section.in-view .section-heading h2,.reveal-section.in-view .events-heading h2,.reveal-section.in-view .standings-copy h2,.reveal-section.in-view .community-heading h2 { animation:headlineSlice .9s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes headlineSlice{from{clip-path:inset(0 100% 0 0);transform:translateX(-25px)}to{clip-path:inset(0);transform:translateX(0)}}
+
+.motion-marquee { overflow:hidden; background:#050606; color:#fff; border-top:1px solid #262729; border-bottom:1px solid #262729; padding:23px 0; }
+.motion-marquee>div { width:max-content; display:flex; gap:35px; align-items:center; animation:marquee 22s linear infinite; }
+.motion-marquee span { font:clamp(38px,5vw,76px)/1 var(--display); letter-spacing:-.02em; white-space:nowrap; }
+.motion-marquee i { color:var(--lime); font-style:normal; font-size:20px; }
+@keyframes marquee{to{transform:translateX(-33.333%)}}
+
+.button,.social-card,.race-row,.palette-chip { transition-duration:.28s; }
+.button:hover { transform:translateY(-3px); box-shadow:0 7px 0 rgba(255,255,255,.12); }
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-frame{animation:none;opacity:0;transform:none}.hero-frame.frame-one{opacity:1}.hero-copy .eyebrow,.hero h1,.hero-deck,.palette-picker,.hero-actions,.next-race,.reveal-section{opacity:1;transform:none;animation:none;transition:none}.motion-marquee>div{animation:none}.button:hover{transform:none}}
